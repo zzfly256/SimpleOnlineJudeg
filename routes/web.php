@@ -13,3 +13,5 @@
 
 Route::auth();
 Route::get('/','Controller@welcome');
+Route::get('/user','Controller@user_edit');
+Route::patch('/user','Controller@user_update');

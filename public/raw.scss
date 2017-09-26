@@ -19,6 +19,10 @@ body{
   margin: 0px 35%;
 }
 
+.margin20{
+  margin-top:20px;
+}
+
 #login-panel{
   background: #ffffff;
   margin-top:40px;
@@ -97,6 +101,18 @@ body{
           font-size:105%;
         }
       }
+    }
+  }
+  .user-edit{
+    line-height:2.5;
+    padding: 0 10%;
+    input{
+      background: rgba(255,255,255,0.1);
+      color:#fff;
+    }
+    label{
+      text-align: left;
+      color:#999;
     }
   }
 }
