@@ -1,0 +1,80 @@
+@import url(css/spectre.css);
+@import url(css/spectre-icons.css);
+@import url(css/font-awesome.min.css);
+body {
+  background: #ffffff;
+  line-height: 1.7; }
+
+.bg-grey {
+  background: #f1f1f1 !important; }
+
+.btn-width {
+  width: 100%; }
+
+.margin-width {
+  margin: 0px 35%; }
+
+#login-panel {
+  background: #ffffff;
+  margin-top: 40px; }
+  #login-panel h3 {
+    line-height: 2; }
+  #login-panel .padding20 {
+    padding: 10px 20px; }
+
+.navbar {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); }
+
+.navbar-section input {
+  background: rgba(255, 255, 255, 0.2);
+  color: #aaa;
+  border: 0px;
+  margin-right: 7px; }
+  .navbar-section input:focus {
+    border: 0px; }
+.navbar-section .dropdown {
+  margin-left: 10px; }
+  .navbar-section .dropdown .menu {
+    background: rgba(255, 255, 255, 0.1); }
+    .navbar-section .dropdown .menu a {
+      color: #ccc; }
+
+#welcome {
+  background: url("/img/bg.jpg") #000;
+  background-size: 100% auto;
+  background-position-y: -50px;
+  margin-top: -72px;
+  height: 700px;
+  background-repeat: no-repeat; }
+  #welcome .wecome-text {
+    text-align: left;
+    margin-top: 175px;
+    margin-left: 100px;
+    color: #ddd; }
+  #welcome .welcome-panel {
+    background: rgba(0, 0, 0, 0.7);
+    height: 400px;
+    margin: 30px 40px; }
+    #welcome .welcome-panel .column {
+      background: rgba(255, 255, 255, 0.2);
+      margin: 2%;
+      color: #fff;
+      height: 100px;
+      font-size: 15px; }
+      #welcome .welcome-panel .column small {
+        margin-left: 0px;
+        display: block;
+        position: absolute;
+        color: #ccc; }
+      #welcome .welcome-panel .column p {
+        font-size: 20px;
+        line-height: 80px; }
+      #welcome .welcome-panel .column a {
+        color: #fff;
+        transition: 200ms; }
+        #welcome .welcome-panel .column a:hover {
+          text-decoration: none;
+          font-size: 105%; }
+
+/*# sourceMappingURL=style.css.map */
