@@ -7,8 +7,13 @@
             </a>
             <!-- menu component -->
             <ul class="menu">
-                <li class="menu-item"><a href="/home" class="btn btn-link">题库1</a></li>
-                <li class="menu-item"><a href="/home" class="btn btn-link">题库2</a></li>
+                <?php
+                    $cat = \App\Category::orderBy("created_at","desc")->get();
+                    foreach ($cat as $item)
+                    {?>
+                        <li class="menu-item"><a href="/category/{{$item->name}}" class="btn btn-link">{{$item->name}}</a></li>
+                    <?php }
+                ?>
             </ul>
         </div>
         <a href="#" class="btn btn-link">排行榜</a>
