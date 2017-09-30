@@ -29,3 +29,11 @@ Route::get('/admin/category/{id}','CategoryController@edit');
 Route::patch('/admin/category/{id}','CategoryController@update');
 Route::delete('/admin/category/{id}','CategoryController@delete');
 
+// 题目
+Route::get('/admin/question','QuestionController@index');
+Route::get('/admin/question/add','QuestionController@create');
+Route::post('/admin/question/add','QuestionController@add');
+Route::get('/admin/question/{id}','QuestionController@show');
+Route::get('/admin/question/{id}/edit','QuestionController@edit');
+Route::patch('/admin/question/{id}','QuestionController@update');
+Route::delete('/admin/question/{id}','QuestionController@delete');

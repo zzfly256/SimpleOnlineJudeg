@@ -7,10 +7,6 @@ body {
   padding: 0px;
   margin: 0px; }
 
-pre b {
-  font-family: "Microsoft YaHei";
-  font-weight: 400; }
-
 .bg-grey {
   background: #f1f1f1 !important; }
 
@@ -135,7 +131,5 @@ pre b {
   #main-container .content {
     width: 83%;
     background-color: #fff; }
-    #main-container .content h4 .label {
-      float: right; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styls.css.map */

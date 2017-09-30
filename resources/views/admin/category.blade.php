@@ -8,10 +8,7 @@
         <div class="sidebar">
             <h3>Simple.OJ</h3>
 
-            <ul class="sidebar-menu">
-                <li><a href="">题库管理</a></li>
-                <li><a href="">题目管理</a></li>
-            </ul>
+            @include('admin.sidebar')
 
         </div>
         <div class="content">
@@ -32,7 +29,7 @@
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->question}}</td>
                                 <td>{{$item->no}}</td>
-                                <td
+                                <td>
                                     <div class="input-group input-inline">
                                         <a class="btn" href="/admin/category/{{$item->id}}#form">编辑</a>
                                         {!!  Form::model($item,['url'=>'/admin/category/'.$item->id,'method'=>'DELETE']) !!}

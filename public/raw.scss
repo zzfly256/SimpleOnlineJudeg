@@ -9,6 +9,10 @@ body{
   margin:0px;
 }
 
+pre b{
+  font-family: "Microsoft YaHei";
+  font-weight: 400;
+}
 .bg-grey{
   background: #f1f1f1!important;
 }
@@ -168,5 +172,10 @@ body{
     width:83%;
     background-color: #fff;
     //height:700px;
+    h4{
+      .label{
+        float: right;
+      }
+    }
   }
 }
