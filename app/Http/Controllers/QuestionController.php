@@ -52,4 +52,18 @@ class QuestionController extends Controller
         $action->delete();
         return redirect('/admin/question');
     }
+    public function user_index($id)
+    {
+        // 前台显示
+        $question = Question::findOrFail($id);
+        return view("question_show",compact('question'));
+    }
+
+    public function user_submit($id)
+    {
+        // 前台显示
+        $question = Question::findOrFail($id);
+        return view("question_submit",compact('question'));
+    }
+
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Question;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -42,6 +43,20 @@ class CategoryController extends Controller
         $action = Category::findOrFail($id);
         $action->delete();
         return redirect('/admin/category');
+    }
+
+    public function user_index($id)
+    {
+        $category = Category::findOrFail($id);
+        $question_id = explode(",",$category->question);
+        //dd($question_id);
+        $question = [];
+        foreach ($question_id as $value)
+        {  
+            $question_value = Question::findOrFail($value);
+            array_push($question,$question_value);
+        }
+        return view('category',compact('category'))->with(["question"=>$question]);
     }
 
 }

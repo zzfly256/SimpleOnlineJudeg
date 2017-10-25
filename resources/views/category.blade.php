@@ -1,5 +1,5 @@
 @section('title')
-    题库管理
+    {{$category->name}} 题目
 @stop
 @include('header')
 <body>
@@ -8,7 +8,7 @@
         <div class="sidebar">
             <h3>Simple.OJ</h3>
 
-            @include('admin.sidebar')
+            @include('sidebar')
 
         </div>
         <div class="content">
@@ -17,24 +17,30 @@
                     <table class="table table-striped table-hover">
                         <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>题目</th>
-                            <th>排序</th>
-
+                            <th>编号</th>
+                            <th>标题</th>
+                            <th>星级</th>
+                            <th>时间</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($category as $item)
+                        @foreach($question as $item)
+
                             <tr>
-                                <td>{{$item->name}}</td>
-                                <td>{{$item->question}}</td>
-                                <td>{{$item->no}}</td>
+
+                                <td>{{$item->id}}</td>
+                                <td><a href="/question/{{$item->id}}" class="question-link">{{$item->title}}</a></td>
+                                <td>{{$item->star}}</td>
+                                <td>{{$item->time}}</td>
+
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
+
         </div>
     </div>
+    @include('footer')
 </body>

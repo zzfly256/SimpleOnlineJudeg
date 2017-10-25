@@ -27,7 +27,7 @@
                             </div>
                             <div class="column col-3">
                                 <small>升级率</small>
-                                <p><?php $total = Auth::user()->total; $level = Auth::user()->level; if($level!=0){echo ($level/$total)*100;}else{echo "0";} ?>%</p>
+                                <p><?php $total = Auth::user()->total; $level = Auth::user()->level; if($level!=0){$result=($level/$total)*100;printf("%.2f",$result);}else{echo "0";} ?>%</p>
                             </div>
                         </div>
                     </div>
@@ -73,3 +73,4 @@
         </div>
     @endif
 </div>
+</body>

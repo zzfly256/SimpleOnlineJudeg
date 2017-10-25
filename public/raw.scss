@@ -33,6 +33,13 @@ pre b{
   margin-top:20px;
 }
 
+.question-link{
+  color: #777;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
 #login-panel{
   background: #ffffff;
   margin-top:40px;

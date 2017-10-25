@@ -26,6 +26,11 @@ pre b {
 .margin20 {
   margin-top: 20px; }
 
+.question-link {
+  color: #777; }
+  .question-link:hover {
+    text-decoration: none; }
+
 #login-panel {
   background: #ffffff;
   margin-top: 40px; }

@@ -3,7 +3,7 @@
 @stop
 @include('header')
 @include('nav')
-
+<body>
 <div class="empty" id="welcome">
     @if(Auth::user())
         <div class="columns col-oneline">
@@ -49,3 +49,4 @@
         </div>
     @endif
 </div>
+</body>
