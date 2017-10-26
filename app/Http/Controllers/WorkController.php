@@ -18,9 +18,9 @@ class WorkController extends Controller
     {
         $count = Work::count();
         if($count>0) {
-            $result = Task::findOrFail(Work::all()->last()->task_id);
+            $result = Task::findOrFail(Work::all()->first()->task_id);
             $result->update(['status' => 2]);
-            $action = Work::all()->last();
+            $action = Work::all()->first();
             $action->delete();
             return $result;
         }
@@ -56,6 +56,13 @@ class WorkController extends Controller
         }else{
             return "false";
         }
+    }
+
+    public function admin_index()
+    {
+        $work = Work::all();
+        //dd($task);
+        return view("admin.work",compact('work'));
     }
 
 }

@@ -29,8 +29,6 @@ Route::post('/admin/category/add','CategoryController@add');
 Route::get('/admin/category/{id}','CategoryController@edit');
 Route::patch('/admin/category/{id}','CategoryController@update');
 Route::delete('/admin/category/{id}','CategoryController@delete');
-Route::get('/admin/task','TaskController@admin_index');
-Route::get('/admin/work','WorkController@admin_index');
 
 // 题目
 Route::get('/admin/question','QuestionController@index');
@@ -40,6 +38,10 @@ Route::get('/admin/question/{id}','QuestionController@show');
 Route::get('/admin/question/{id}/edit','QuestionController@edit');
 Route::patch('/admin/question/{id}','QuestionController@update');
 Route::delete('/admin/question/{id}','QuestionController@delete');
+
+// 工作列表
+Route::get('/admin/task','TaskController@admin_index');
+Route::get('/admin/work','WorkController@admin_index');
 
 // 用户前台
 // 题库

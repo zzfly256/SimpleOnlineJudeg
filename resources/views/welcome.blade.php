@@ -17,6 +17,7 @@
                 <div class="welcome-panel">
                     <div class="container">
                         <div class="columns">
+                            
                             <div class="column col-4">
                                 <small>等级</small>
                                 <p>{{Auth::user()->level}}</p>
