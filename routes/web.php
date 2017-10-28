@@ -59,3 +59,6 @@ Route::get('/api/get','WorkController@get');
 Route::get('/api/task/{id}/{status}','WorkController@update');
 Route::get('/api/question/{id}','WorkController@question');
 Route::get('/api/user/{id}/{level}','WorkController@upgrade');
+
+// 排行榜分离API
+Route::get('/api/user','RankController@getUser');
