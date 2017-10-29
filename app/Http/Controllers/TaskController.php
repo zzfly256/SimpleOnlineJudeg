@@ -26,14 +26,14 @@ class TaskController extends Controller
 
     public function user_index()
     {
-        $task = Auth::user()->task;
+        $task = Auth::user()->task()->orderBy('created_at', 'desc');
         //dd($task);
         return view("task",compact('task'));
     }
 
     public function admin_index()
     {
-        $task = Task::all();
+        $task = Task::orderBy('created_at', 'desc');
         //dd($task);
         return view("admin.task",compact('task'));
     }
