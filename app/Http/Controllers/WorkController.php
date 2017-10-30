@@ -60,7 +60,7 @@ class WorkController extends Controller
 
     public function admin_index()
     {
-        $work = Work->orderBy('created_at', 'desc');
+        $work = Work::orderBy('created_at', 'desc')->get();
         //dd($task);
         return view("admin.work",compact('work'));
     }

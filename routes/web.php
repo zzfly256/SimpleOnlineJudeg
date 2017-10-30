@@ -43,6 +43,11 @@ Route::delete('/admin/question/{id}','QuestionController@delete');
 Route::get('/admin/task','TaskController@admin_index');
 Route::get('/admin/work','WorkController@admin_index');
 
+// 用户管理
+Route::get('/admin/user','Controller@user_list');
+Route::get('/admin/user/{id}','Controller@user_edit_admin');
+Route::patch('/admin/user/{id}','Controller@user_update_admin');
+
 // 用户前台
 // 题库
 Route::get('/category/{id}','CategoryController@user_index');
