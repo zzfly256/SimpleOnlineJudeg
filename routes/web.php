@@ -23,30 +23,30 @@ Route::patch('/user','Controller@user_update');
 
 // 管理员面板
 // 题库
-Route::get('/admin','CategoryController@index');
-Route::get('/admin/category','CategoryController@index');
-Route::post('/admin/category/add','CategoryController@add');
-Route::get('/admin/category/{id}','CategoryController@edit');
-Route::patch('/admin/category/{id}','CategoryController@update');
-Route::delete('/admin/category/{id}','CategoryController@delete');
+Route::get('/admin','CategoryController@index')->middleware('isAdmin');;
+Route::get('/admin/category','CategoryController@index')->middleware('isAdmin');
+Route::post('/admin/category/add','CategoryController@add')->middleware('isAdmin');
+Route::get('/admin/category/{id}','CategoryController@edit')->middleware('isAdmin');
+Route::patch('/admin/category/{id}','CategoryController@update')->middleware('isAdmin');
+Route::delete('/admin/category/{id}','CategoryController@delete')->middleware('isAdmin');
 
 // 题目
-Route::get('/admin/question','QuestionController@index');
-Route::get('/admin/question/add','QuestionController@create');
-Route::post('/admin/question/add','QuestionController@add');
-Route::get('/admin/question/{id}','QuestionController@show');
-Route::get('/admin/question/{id}/edit','QuestionController@edit');
-Route::patch('/admin/question/{id}','QuestionController@update');
-Route::delete('/admin/question/{id}','QuestionController@delete');
+Route::get('/admin/question','QuestionController@index')->middleware('isAdmin');
+Route::get('/admin/question/add','QuestionController@create')->middleware('isAdmin');
+Route::post('/admin/question/add','QuestionController@add')->middleware('isAdmin');
+Route::get('/admin/question/{id}','QuestionController@show')->middleware('isAdmin');
+Route::get('/admin/question/{id}/edit','QuestionController@edit')->middleware('isAdmin');
+Route::patch('/admin/question/{id}','QuestionController@update')->middleware('isAdmin');
+Route::delete('/admin/question/{id}','QuestionController@delete')->middleware('isAdmin');
 
 // 工作列表
-Route::get('/admin/task','TaskController@admin_index');
-Route::get('/admin/work','WorkController@admin_index');
+Route::get('/admin/task','TaskController@admin_index')->middleware('isAdmin');
+Route::get('/admin/work','WorkController@admin_index')->middleware('isAdmin');
 
 // 用户管理
-Route::get('/admin/user','Controller@user_list');
-Route::get('/admin/user/{id}','Controller@user_edit_admin');
-Route::patch('/admin/user/{id}','Controller@user_update_admin');
+Route::get('/admin/user','Controller@user_list')->middleware('isAdmin');
+Route::get('/admin/user/{id}','Controller@user_edit_admin')->middleware('isAdmin');
+Route::patch('/admin/user/{id}','Controller@user_update_admin')->middleware('isAdmin');
 
 // 用户前台
 // 题库

@@ -49,33 +49,42 @@ class Controller extends BaseController
         $user = User::all();
         //dd($user);
         return view("admin.user",compact('user'));
+
     }
 
     // 用户编辑
     public function user_edit_admin($id)
     {
+        if(Auth::user()->authority>1) {
         $user_item = User::findOrFail($id);
         return view("admin.user_edit",compact('user_item'))->with('user',User::all());
+        }else{
+            return redirect('/');
+        }
     }
 
     // 用户资料保存
     public function user_update_admin(Request $request,$id)
     {
-        $user = User::findOrFail($id);
-        $action = $request->all();
-        // 判断密码项是否为空
-        if(empty($action['password'])){
-            // 删除关联数组密码项
-            unset($action['password']);
+        if(Auth::user()->authority>1) {
+            $user = User::findOrFail($id);
+            $action = $request->all();
+            // 判断密码项是否为空
+            if (empty($action['password'])) {
+                // 删除关联数组密码项
+                unset($action['password']);
+            } else {
+                // 密码加密
+                $action['password'] = bcrypt($action['password']);
+            }
+            // 打印出结果用于检查
+            //dd($action);
+            $user->update($action);
+            $user = User::all();
+            return view("admin.user", compact('user'));
         }else{
-            // 密码加密
-            $action['password']=bcrypt($action['password']);
+            return redirect('/');
         }
-        // 打印出结果用于检查
-        //dd($action);
-        $user->update($action);
-        $user = User::all();
-        return view("admin.user",compact('user'));
     }
 
 }
