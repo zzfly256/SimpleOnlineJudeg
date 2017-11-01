@@ -21,7 +21,7 @@
                     {!!  Form::open(['url'=>'/task/'.$question->id]) !!}
                     <div class="form-group">
                         {!! Form::label('内容',null,["class"=>"form-label"]) !!}
-                        {!! Form::textarea('code',null,["class"=>"form-input", "placeholder"=>"请输入题目内容正文"]) !!}
+                        {!! Form::textarea('code',null,["class"=>"form-input", "placeholder"=>"请输入您的代码","required"=>"required"]) !!}
                     </div>
                     <div class="form-group" style="margin-top: 20px;">
                         {!! Form::submit('提交',["class"=>"btn btn-default"]) !!}
