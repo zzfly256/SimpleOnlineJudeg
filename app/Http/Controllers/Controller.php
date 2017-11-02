@@ -80,8 +80,8 @@ class Controller extends BaseController
             // 打印出结果用于检查
             //dd($action);
             $user->update($action);
-            $user = User::all();
-            return view("admin.user", compact('user'));
+            //dd($user);
+            return redirect('/admin/user');
         }else{
             return redirect('/');
         }

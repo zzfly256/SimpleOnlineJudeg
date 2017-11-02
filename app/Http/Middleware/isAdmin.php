@@ -16,12 +16,10 @@ class isAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()):
-        if(Auth::user()->authority>1)
+        if(Auth::user()&&Auth::user()->authority>1)
         {
             return $next($request);
         }
-        endif;
         return redirect('/');
     }
 }

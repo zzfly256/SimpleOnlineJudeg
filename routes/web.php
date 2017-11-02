@@ -67,3 +67,6 @@ Route::get('/api/user/{id}/{level}','WorkController@upgrade');
 
 // 排行榜分离API
 Route::get('/api/user','RankController@getUser');
+
+// 排行榜
+Route::get('/rank','RankController@total');

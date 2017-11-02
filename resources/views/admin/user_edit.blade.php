@@ -59,7 +59,7 @@
                         {!! Form::label('做题数',null,["class"=>"form-label"]) !!}
                         {!! Form::text('total',null,["class"=>"form-input", "placeholder"=>"请输入用户等级"]) !!}
                         {!! Form::label('权限',null,["class"=>"form-label"]) !!}
-                        {!! Form::select('authority',['1'=>"普通用户",'2'=>"管理员"],Auth::user()->authority,["class"=>"form-input"]) !!}
+                        {!! Form::select('authority',['1'=>"普通用户",'2'=>"管理员"],$user_item->authority,["class"=>"form-input"]) !!}
                         {!! Form::hidden('category','1') !!}
                         {!! Form::label('密码*',null,["class"=>"form-label"]) !!}
                         {!! Form::password('password',["class"=>"form-input", "placeholder"=>"若非修改，请勿填写"]) !!}

@@ -15,6 +15,11 @@
                     <?php }
                 ?>
             </ul>
+            @if(Auth::user()&&Auth::user()->authority>1)
+                <a href="/admin" class="btn btn-link">
+                    控制面板
+                </a>
+            @endif
         </div>
         <a href="#" class="btn btn-link">排行榜</a>
     </section>
