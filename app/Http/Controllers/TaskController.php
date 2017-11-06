@@ -26,9 +26,13 @@ class TaskController extends Controller
 
     public function user_index()
     {
+        if(Auth::user()):
         $task = Auth::user()->task()->orderBy('created_at', 'desc')->get();
         //dd($task);
         return view("task",compact('task'));
+        else:
+            return redirect('/');
+        endif;
     }
 
     public function admin_index()

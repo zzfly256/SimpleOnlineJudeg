@@ -18,12 +18,10 @@ class RankController extends Controller
         $user = (array)User::all();
         Rank::totalRank($user);
         //dd($user);
-        foreach ($user as $item)
+        foreach ($user as $users)
         {
-            foreach ($item as $item) {
-                print_r($item->name);
-            }
-
+            // 此处有一个奇怪的bug
+            return view('rank_total',compact('users'));
         }
     }
 }

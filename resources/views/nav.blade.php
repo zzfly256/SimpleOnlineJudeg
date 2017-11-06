@@ -21,7 +21,7 @@
                 </a>
             @endif
         </div>
-        <a href="#" class="btn btn-link">排行榜</a>
+        <a href="/rank" class="btn btn-link">排行榜</a>
     </section>
     <section class="navbar-section">
         @if(Auth::user())
