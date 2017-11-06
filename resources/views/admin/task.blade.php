@@ -50,7 +50,10 @@
                                             echo '<span style="color:red">Wrong Answer</span>';
                                             break;
                                         case '5':
-                                            echo '<span style="color:coral">Time limited</span>';
+                                            echo '<span style="color:coral">Time Limit Exceeded/span>';
+                                            break;
+                                        case '6':
+                                            echo '<span style="color:orangered">Compile Error</span>';
                                             break;
 
                                     }
