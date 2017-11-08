@@ -48,7 +48,7 @@
                         <div class="columns">
                             <div class="column col-4">
                                 <small>排名</small>
-                                <p>1</p>
+                                <p><?php echo file_get_contents("http://127.0.0.1/rank/".Auth::user()->id);?></p>
                             </div>
                             <div class="column col-4">
                                 <small>个人资料</small>

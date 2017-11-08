@@ -21,7 +21,13 @@
                 </a>
             @endif
         </div>
-        <a href="/rank" class="btn btn-link">排行榜</a>
+        <div class="dropdown">
+        <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">排行榜<i class="icon icon-caret"></i></a>
+        <ul class="menu">
+            <li class="menu-item"><a href="/rank" class="btn btn-link">个人榜</a></li>
+            <li class="menu-item"><a href="/rank/school" class="btn btn-link">学校榜</a></li>
+        </ul>
+        </div>
     </section>
     <section class="navbar-section">
         @if(Auth::user())

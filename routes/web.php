@@ -70,3 +70,5 @@ Route::get('/api/user','RankController@getUser');
 
 // 排行榜
 Route::get('/rank','RankController@total');
+Route::get('/rank/school','RankController@school');
+Route::get('/rank/{id}','RankController@user');
